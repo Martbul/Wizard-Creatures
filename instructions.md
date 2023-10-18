@@ -62,3 +62,38 @@
     - show in the main layout
     - pass error to render in login and register pages
 21) automatically login after register
+
+22) map pages to navigation in both LoggedIn and LoggedOut state
+
+23) add creature model to mongoose
+
+24) implement - app posts page
+    - show each creature with imgage,name,species and description
+    - add details btn to every creature
+    - if no creature "there are no posts yet ..."
+
+25) add details page(for creatures)
+    -if the user is the owner of the post, he should have 'edit' and 'delete' btn
+    - if the user hasnt logged in => no btns
+    - if the user is not the owner => vote btn
+26) vote btn
+    - when clicked => vote
+    - redirect
+    - show the email of people who voted
+    - if user has voted => 'thanks for voting' and add his email to the voted people
+27) delete creature
+    - on success redirect to all posts page
+
+28) edit creature
+    - on success redirect to current page
+
+29)  routes guards 
+
+30) validation
+    - login
+    - register
+    - creatures
+
+31) profile 
+    - show my posts
+    -  if there are no posts - msg

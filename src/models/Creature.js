@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 
 
 const creatureSchema = new mongoose.Schema({
-name:{type: String,required: true},
-species:{type: String,required: true},
-skinColor:{type: String,required: true},
-eyeColor:{type: String,required: true},
-image:{type: String,required: true},
-description:{type: String,required: true},
+name:{type: String,required: true,minLength:2,unique: true},
+species:{type: String,required: true,minLength:3},
+skinColor:{type: String,required: true,minLength:3},
+eyeColor:{type: String,required: true,minLength:3},
+image:{type: String,required: true,match:[/^https?:\/\/.+/,"provide valid creature image link!"]},
+description:{type: String,required: true,minLength:5,maxLength:500},
 votes:[{
     type: mongoose.Types.ObjectId,
     ref:'User'
